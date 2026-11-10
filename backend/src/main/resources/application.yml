@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: logicflow-api
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/logicflow}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: America/Recife
+  jackson:
+    time-zone: America/Recife
